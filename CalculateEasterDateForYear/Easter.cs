@@ -2,7 +2,7 @@
 
 namespace CalculateEasterDateForYear
 {
-    public class EasterDate
+    public class Easter
     {
         public static DateTime GetDateForYear(int? yearArg = null)
         {
