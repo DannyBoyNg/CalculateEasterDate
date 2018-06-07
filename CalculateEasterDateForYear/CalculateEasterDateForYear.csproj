@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>DannyBoyNg</Authors>
+    <Description>A library to calculate the date that Easter will be on for a specific year</Description>
+    <PackageProjectUrl>https://github.com/DannyBoyNg/CalculateEasterDateForYear</PackageProjectUrl>
+    <PackageTags>Easter Sunday</PackageTags>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/DannyBoyNg/CalculateEasterDateForYear/master/LICENSE</PackageLicenseUrl>
+    <PackageId>DannyBoyNg.CalculateEasterDateForYear</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
