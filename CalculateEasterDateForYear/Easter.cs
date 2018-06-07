@@ -1,13 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CalculateEasterDateForYear
 {
     public class Easter
     {
+        static Dictionary<int, DateTime> cache = new Dictionary<int, DateTime>();
+
         public static DateTime GetDateForYear(int? yearArg = null)
         {
-            int year;
-            year = (yearArg == null) ? DateTime.Now.Year : year = yearArg.Value;
+            int year = (yearArg == null) ? DateTime.Now.Year : year = yearArg.Value;
+            if (cache.ContainsKey(year)) return cache[year];
             int day = 0;
             int month = 0;
 
@@ -23,7 +26,10 @@ namespace CalculateEasterDateForYear
                 month++;
                 day -= 31;
             }
-            return new DateTime(year, month, day);
+
+            var result = new DateTime(year, month, day);
+            cache.Add(year, result);
+            return result;
         }
     }
 }
